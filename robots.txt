@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://olmancalvogonzalez.com/sitemap.xml

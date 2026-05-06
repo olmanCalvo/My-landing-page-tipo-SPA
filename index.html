@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Defensa Penal Técnica</title>
+
+    <!-- SEO PRINCIPAL -->
+    <meta name="description" content="Defensa estratégica en derecho penal en Costa Rica. Asesoría legal integral y efectiva dirigida por el Lic. Olman Calvo-González.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Defensa Penal Técnica | Lic. Olman Calvo-González">
+    <meta property="og:description" content="Defensa estratégica en derecho penal en Costa Rica. Asesoría legal integral y efectiva.">
+    <meta property="og:image" content="https://olmancalvogonzalez.com/fotodeperfil.jpeg">
+    <meta property="og:url" content="https://olmancalvogonzalez.com/">
+    <link rel="canonical" href="https://olmancalvogonzalez.com/">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0a0a0a",
+                        secondary: "#856404",
+                        surface: "#fcf9f8",
+                    },
+                    fontFamily: {
+                        headline: ["Noto Serif"],
+                        body: ["Work Sans"],
+                    }
+                }
+            }
+        }
+
+        function showSection(sectionId) {
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.add('hidden');
+            });
+            document.getElementById(sectionId).classList.remove('hidden');
+            document.getElementById('mobile-menu').classList.add('hidden');
+            window.scrollTo(0,0);
+        }
+    </script>
+    <style>
+        .section-overlay {
+            background: linear-gradient(to bottom, rgba(10,10,10,0.8) 0%, rgba(10,10,10,0.4) 50%, #fcf9f8 100%);
+        }
+        .bg-fixed-photo {
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+        .whatsapp-pulse {
+            animation: pulse-green 2s infinite;
+        }
+        .logo-image {
+            display: block;
+            width: auto;
+            object-fit: contain;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+            transition: filter 220ms ease, opacity 220ms ease, mix-blend-mode 220ms ease;
+        }
+        .logo-image-nav {
+            height: 3.5rem;
+        }
+        .logo-image-footer {
+            height: 5rem;
+        }
+        .logo-on-light {
+            filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.15));
+        }
+        @media (min-width: 768px) {
+            .logo-image-nav {
+                height: 4rem;
+            }
+        }
+        @keyframes pulse-green {
+            0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-neutral-900 overflow-x-hidden">
+
+<nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-neutral-200">
+    <div class="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
+        <div class="flex items-center cursor-pointer" onclick="showSection('inicio')">
+            <img src="Logo%20para%20olman.png" alt="Logo Olman Abogado" class="logo-image logo-image-nav logo-on-light">
+        </div>
+        
+        <div class="hidden lg:flex gap-8 items-center font-medium text-sm uppercase tracking-widest">
+            <button onclick="showSection('inicio')" class="hover:text-secondary transition-colors">Inicio</button>
+            <button onclick="showSection('perfil')" class="hover:text-secondary transition-colors">Perfil</button>
+            <button onclick="showSection('formacion')" class="hover:text-secondary transition-colors">Formación</button>
+            <button onclick="showSection('servicios')" class="hover:text-secondary transition-colors">Servicios</button>
+            <button onclick="showSection('blog')" class="hover:text-secondary transition-colors">Blog</button>
+            <button onclick="showSection('contacto')" class="bg-primary text-white px-6 py-2 hover:bg-secondary transition-all">Contacto</button>
+        </div>
+
+        <button class="lg:hidden text-primary" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+            <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+    </div>
+    
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-neutral-200 flex flex-col p-6 gap-4 uppercase text-xs tracking-widest font-bold">
+        <button onclick="showSection('inicio')">Inicio</button>
+        <button onclick="showSection('perfil')">Perfil</button>
+        <button onclick="showSection('formacion')">Formación</button>
+        <button onclick="showSection('servicios')">Servicios</button>
+        <button onclick="showSection('blog')">Blog</button>
+        <button onclick="showSection('contacto')">Contacto</button>
+    </div>
+</nav>
+
+<div class="fixed left-4 bottom-8 z-40 flex flex-col gap-4">
+    <a href="https://wa.me/50684689175" target="_blank" class="bg-green-500 text-white p-3 shadow-lg rounded-full hover:scale-110 transition-all whatsapp-pulse">
+        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.588-5.946 0-6.556 5.332-11.891 11.893-11.891 3.181 0 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.481 8.403 0 6.556-5.332 11.89-11.893 11.89-2.015 0-3.991-.511-5.741-1.486l-6.352 1.705zm6.386-3.612c1.556.921 3.23 1.408 4.96 1.408 5.403 0 9.803-4.397 9.803-9.792 0-2.612-1.017-5.07-2.864-6.917-1.847-1.847-4.303-2.865-6.915-2.865-5.407 0-9.807 4.403-9.807 9.796 0 1.832.511 3.613 1.478 5.155l-.979 3.576 3.666-.983zm10.115-6.733c-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z"/></svg>
+    </a>
+    <a href="https://cr.linkedin.com/in/olman-calvo-gonzalez-3970563b1" target="_blank" class="bg-white p-3 shadow-lg rounded-full hover:text-secondary transition-all"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" class="w-5 h-5"></a>
+    <a href="https://www.facebook.com/olman.calvo.gonzalez" target="_blank" class="bg-white p-3 shadow-lg rounded-full hover:text-secondary transition-all"><img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" class="w-5 h-5"></a>
+    <a href="https://www.instagram.com/olmancg13/" target="_blank" class="bg-white p-3 shadow-lg rounded-full hover:text-secondary transition-all"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" class="w-5 h-5"></a>
+</div>
+
+<main class="pt-24 min-h-screen">
+
+    <section id="inicio" class="relative min-h-[90vh] flex items-center bg-fixed-photo" style="background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80');">
+        <div class="absolute inset-0 section-overlay"></div>
+        <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+            <h4 class="text-secondary font-bold tracking-[0.3em] uppercase mb-4">Costa Rica</h4>
+            <h1 class="font-headline text-5xl md:text-8xl text-white font-bold leading-tight mb-8 uppercase tracking-tighter">Defensa Penal Técnica</h1>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <button onclick="showSection('servicios')" class="border-2 border-white text-white px-10 py-4 hover:bg-white hover:text-primary transition-all font-bold uppercase tracking-widest">Áreas de Práctica</button>
+                <a href="https://wa.me/50684689175" target="_blank" class="bg-green-600 text-white px-10 py-4 hover:bg-green-700 transition-all font-bold uppercase tracking-widest flex items-center justify-center gap-2">
+                    Consulta WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="perfil" class="hidden relative min-h-[90vh] flex items-center bg-fixed-photo" style="background-image: url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=1600&q=80');">
+        <div class="absolute inset-0 section-overlay"></div>
+        <div class="relative z-10 max-w-6xl mx-auto w-full px-6 py-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+                <div class="relative flex justify-start">
+                <img src="fotodeperfil.jpeg" alt="Olman Calvo" class="block w-full max-w-md grayscale">
+                </div>
+                <div class="space-y-6 bg-black/45 backdrop-blur-sm rounded-lg p-6 md:p-8 border border-white/15 shadow-xl">
+                    <h3 class="font-headline text-4xl font-bold text-center text-white drop-shadow-md">Abogado Litigante</h3>
+                    <div class="text-neutral-100 leading-relaxed space-y-4 text-justify drop-shadow-sm">
+                        <p>Soy el <strong>Lic. Olman Calvo-González</strong>, abogado litigante con especialización en Derecho Penal, comprometido con la defensa técnica, estratégica y efectiva de los derechos de mis representados dentro del sistema de justicia costarricense.</p>
+                        <p>Cuento con amplia experiencia en el ejercicio profesional, participando activamente en todas las etapas del proceso penal, desde la fase de investigación hasta la ejecución de la pena, garantizando siempre un enfoque riguroso, ético y orientado a resultados. Mi práctica se caracteriza por un análisis profundo de cada caso, la construcción de estrategias sólidas de defensa y el respeto irrestricto al debido proceso.</p>
+
+      <p>Paralelamente, me desempeño como profesor universitario, lo que me permite mantener una actualización constante en doctrina, jurisprudencia y tendencias contemporáneas del Derecho, integrando el conocimiento académico con la práctica forense. Esta doble perspectiva fortalece mi capacidad de argumentación y mi criterio jurídico en cada asunto que asumo.
+Ofrezco defensa penal integral, asesoría jurídica especializada, análisis de casos complejos y acompañamiento estratégico en procesos judiciales, con un enfoque personalizado, confidencial y orientado a soluciones efectivas.</p>
+                    
+                        <p>Asimismo, ofrezco servicios profesionales en otras áreas del Derecho, incluyendo materia laboral, derecho de familia y ejercicio notarial, brindando asesoría integral tanto a personas físicas como jurídicas. Esta visión multidisciplinaria me permite abordar los asuntos legales con un enfoque completo, estratégico y adaptado a las necesidades particulares de cada cliente.</p>
+
+<p>Mi compromiso es claro: brindar una defensa técnica de alto nivel, con responsabilidad, discreción y excelencia profesional.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="formacion" class="hidden py-20 relative overflow-hidden">
+        <!-- Imagen de fondo: biblioteca/universidad -->
+        <div class="absolute inset-0 bg-cover bg-center bg-fixed" style="background-image:url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=1600&q=80');"></div>
+        <!-- Overlay fundido radial: deja ver la imagen en el centro, funde hacia los bordes -->
+        <div class="absolute inset-0" style="background: radial-gradient(ellipse 80% 70% at 50% 40%, rgba(252,249,248,0.15) 0%, rgba(252,249,248,0.55) 40%, rgba(252,249,248,0.93) 75%, #fcf9f8 100%);"></div>
+        <!-- Fade superior e inferior -->
+        <div class="absolute inset-x-0 top-0 h-24" style="background: linear-gradient(to bottom, #fcf9f8, transparent);"></div>
+        <div class="absolute inset-x-0 bottom-0 h-24" style="background: linear-gradient(to top, #fcf9f8, transparent);"></div>
+        <div class="relative z-10 max-w-4xl mx-auto px-6">
+            <h2 class="font-headline text-4xl font-bold text-center mb-12">Trayectoria Académica</h2>
+            <div class="space-y-6">
+                <div class="bg-white p-8 border-l-4 border-secondary shadow-sm">
+                    <span class="text-secondary font-bold uppercase text-xs tracking-widest">2026</span>
+                    <h4 class="text-xl font-bold font-headline">Master en Derecho Penal</h4>
+                    <p class="text-neutral-600 italic">Universidad Internacional de las Americas</p>
+                </div>
+                <div class="bg-white p-8 border-l-4 border-secondary shadow-sm">
+                    <span class="text-secondary font-bold uppercase text-xs tracking-widest">2026</span>
+                    <h4 class="text-xl font-bold font-headline">Especialidad en Derecho Penal</h4>
+                    <p class="text-neutral-600 italic">Colegio de Abogados y Abogadas de Costa Rica</p>
+                </div>
+                <div class="bg-white p-8 border-l-4 border-secondary shadow-sm">
+                    <span class="text-secondary font-bold uppercase text-xs tracking-widest">2025</span>
+                    <h4 class="text-xl font-bold font-headline">Especialidad en Derecho Notarial y Registral</h4>
+                    <p class="text-neutral-600 italic">Universidad Fidelitas</p>
+                </div>
+                <div class="bg-white p-8 border-l-4 border-secondary shadow-sm">
+                    <span class="text-secondary font-bold uppercase text-xs tracking-widest">2025</span>
+                    <h4 class="text-xl font-bold font-headline">Diplomado especializado de Neuroderecho Penal</h4>
+                    <p class="text-neutral-600 italic">Instituto Internacional de Estudio e Investigacion Juridica (INEJ)</p>
+                </div>
+                                <div class="bg-white p-8 border-l-4 border-secondary shadow-sm">
+                    <span class="text-secondary font-bold uppercase text-xs tracking-widest">2025</span>
+                    <h4 class="text-xl font-bold font-headline">Diplomado Praxis Pericial Forense</h4>
+                    <p class="text-neutral-600 italic">Instituto Robert Owen</p>
+                </div>
+                                <div class="bg-white p-8 border-l-4 border-secondary shadow-sm">
+                    <span class="text-secondary font-bold uppercase text-xs tracking-widest">2022</span>
+                    <h4 class="text-xl font-bold font-headline">Licenciatura en Derecho</h4>
+                    <p class="text-neutral-600 italic">Cum Laude Probatus</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="hidden py-20 px-6 relative overflow-hidden">
+        <!-- Imagen de fondo: libros jurídicos -->
+        <div class="absolute inset-0 bg-cover bg-center bg-fixed" style="background-image:url('https://images.unsplash.com/photo-1589994965851-a8f479c573a9?auto=format&fit=crop&w=1600&q=80');"></div>
+        <!-- Overlay fundido: oscuro en bordes, transparente en el centro para guiar la vista -->
+        <div class="absolute inset-0" style="background: radial-gradient(ellipse 80% 70% at 50% 40%, rgba(252,249,248,0.18) 0%, rgba(252,249,248,0.55) 40%, rgba(252,249,248,0.92) 75%, #fcf9f8 100%);"></div>
+        <!-- Capa superior para homogeneizar arriba y abajo -->
+        <div class="absolute inset-x-0 top-0 h-24" style="background: linear-gradient(to bottom, #fcf9f8, transparent);"></div>
+        <div class="absolute inset-x-0 bottom-0 h-24" style="background: linear-gradient(to top, #fcf9f8, transparent);"></div>
+        <div class="relative z-10 max-w-7xl mx-auto">
+            <h2 class="font-headline text-5xl font-bold text-center mb-16 underline decoration-secondary">Áreas de Práctica</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-primary text-white p-12 md:p-14 md:col-span-2 shadow-2xl relative overflow-hidden group border-2 border-secondary/70 ring-4 ring-secondary/20">
+                    <div class="absolute top-4 right-4 bg-secondary text-primary text-[11px] font-black uppercase tracking-[0.2em] px-4 py-2 rounded-full">Especialidad Principal</div>
+                    <div class="absolute -top-16 -left-16 w-44 h-44 rounded-full bg-secondary/15 blur-2xl"></div>
+                    <span class="material-symbols-outlined text-secondary text-6xl mb-4">gavel</span>
+                    <h3 class="font-headline text-5xl font-bold mb-4 leading-tight">Defensa Penal Técnica</h3>
+                    <p class="text-neutral-200 mb-8 text-xl italic max-w-3xl">Defensa integral en etapas de Investigación, Intermedia y Juicio, con estrategia procesal rigurosa y enfoque en resultados.</p>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm tracking-wide">
+                        <li>• Indagatoria y Recursos de Apelación</li>
+                        <li>• Acción Civil Resarcitoria</li>
+                        <li>• Procesos Penales Juveniles</li>
+                        <li>• Delitos contra la Vida y Propiedad</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto mt-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 items-stretch">
+                <div class="bg-secondary text-white p-10 shadow-2xl relative overflow-hidden group h-full">
+                    <span class="material-symbols-outlined text-primary text-5xl mb-4">balance</span>
+                    <h3 class="font-headline text-3xl font-bold mb-4">Derecho Notarial y Registral</h3>
+                    <ul class="space-y-3 text-sm tracking-wide">
+                        <li>• Constitución de sociedades</li>
+                        <li>• Traspasos de bienes</li>
+                        <li>• Elaboración y redacción de contratos</li>
+                        <li>• Testamentos</li>
+                    </ul>
+                </div>
+
+                <div class="bg-primary text-white p-10 shadow-2xl relative overflow-hidden group h-full">
+                    <span class="material-symbols-outlined text-secondary text-5xl mb-4">work</span>
+                    <h3 class="font-headline text-3xl font-bold mb-4">Derecho Laboral</h3>
+                    <ul class="space-y-3 text-sm tracking-wide">
+                        <li>• Procesos ordinarios laborales</li>
+                        <li>• Despidos injustificados</li>
+                        <li>• Cobro de prestaciones laborales</li>
+                        <li>• Reinstalación laboral</li>
+                        <li>• Otros</li>
+                    </ul>
+                </div>
+
+                <div class="bg-secondary text-white p-10 shadow-2xl relative overflow-hidden group h-full md:col-span-2 xl:col-span-1">
+                    <span class="material-symbols-outlined text-primary text-5xl mb-4">family_restroom</span>
+                    <h3 class="font-headline text-3xl font-bold mb-4">Derecho de Familia</h3>
+                    <ul class="space-y-3 text-sm tracking-wide">
+                        <li>• Proceso de guarda y crianza</li>
+                        <li>• Filiaciones</li>
+                        <li>• Adopciones y pensiones alimentarias</li>
+                        <li>• Otros</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="hidden py-20 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div>
+                <h2 class="font-headline text-5xl font-bold mb-8">Agende su Consulta</h2>
+                <div class="space-y-8 mb-12 text-lg">
+                    <div class="flex items-center gap-4">
+                        <span class="material-symbols-outlined text-secondary text-3xl">call</span>
+                        <div>
+                            <p><strong>Directo:</strong> 8468 9175</p>
+                            <p><strong>Oficina:</strong> 2221 7505</p>
+                        </div>
+                    </div>
+                    <p class="bg-neutral-100 p-4 border-l-4 border-secondary text-sm"><strong>Cita previa únicamente:</strong> De forma presencial en la Uruca o de manera virtual.</p>
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-2xl border-4 border-white h-80">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d981.9453833473212!2d-84.0914917!3d9.9487267!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e4af92bf2233%3A0x1eca894e9db6604f!2sZar%20Abogados!5e0!3m2!1ses!2scr!4v1775510400000"
+                        class="w-full h-full"
+                        style="border:0;"
+                        loading="eager"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen
+                        title="Ubicacion de Zar Abogados">
+                    </iframe>
+                </div>
+            </div>
+            <form id="contact-form" class="bg-white p-10 shadow-2xl border-t-8 border-secondary space-y-6">
+                <input id="name" type="text" placeholder="Nombre Completo" class="w-full border-neutral-200 p-4">
+                <input id="email" type="email" placeholder="Correo Electrónico" class="w-full border-neutral-200 p-4">
+                <textarea id="message" placeholder="Detalles de su caso..." rows="5" class="w-full border-neutral-200 p-4"></textarea>
+                <button type="submit" class="w-full bg-primary text-white py-5 font-bold uppercase tracking-widest hover:bg-secondary">Enviar Solicitud</button>
+                <div id="form-message" class="mt-4 text-center"></div>
+            </form>
+        </div>
+    </section>
+
+    <section id="blog" class="hidden py-20 px-6 relative overflow-hidden">
+    
+    <!-- Fondo estilo igual a las otras secciones -->
+    <div class="absolute inset-0 bg-cover bg-center bg-fixed"
+         style="background-image:url('https://images.unsplash.com/photo-1453945619913-79ec89a82c51?auto=format&fit=crop&w=1600&q=80');">
+    </div>
+
+    <!-- Overlay -->
+    <div class="absolute inset-0"
+         style="background: radial-gradient(ellipse 80% 70% at 50% 40%, rgba(252,249,248,0.18) 0%, rgba(252,249,248,0.55) 40%, rgba(252,249,248,0.92) 75%, #fcf9f8 100%);">
+    </div>
+
+    <div class="absolute inset-x-0 top-0 h-24" style="background: linear-gradient(to bottom, #fcf9f8, transparent);"></div>
+    <div class="absolute inset-x-0 bottom-0 h-24" style="background: linear-gradient(to top, #fcf9f8, transparent);"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto">
+        <h2 class="font-headline text-5xl font-bold text-center mb-16 underline decoration-secondary">
+            Blog Jurídico
+        </h2>
+
+        <div id="blog-container" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10"></div>
+
+        <div id="blog-empty" class="hidden text-center text-neutral-700 text-lg mt-10">
+            No hay publicaciones todavía.
+        </div>
+    </div>
+    </section>
+
+</main>
+
+<footer class="bg-neutral-900 text-white py-12 px-6">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="text-center md:text-left">
+            <p class="text-neutral-500 text-xs tracking-widest uppercase">© 2026 Defensa Técnica Especializada.</p>
+        </div>
+        <div class="flex flex-wrap justify-center gap-6 text-xs uppercase tracking-widest font-bold">
+            <a href="https://wa.me/50684689175" class="text-green-500">WhatsApp</a>
+            <a href="https://cr.linkedin.com/in/olman-calvo-gonzalez-3970563b1" target="_blank">LinkedIn</a>
+            <a href="https://www.facebook.com/olman.calvo.gonzalez" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/olmancg13/" target="_blank">Instagram</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+document.getElementById('contact-form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+  const messageDiv = document.getElementById('form-message');
+
+  // Validación básica
+  if (!name || !email || !message) {
+    messageDiv.innerHTML = '<p class="text-red-500">Por favor, complete todos los campos.</p>';
+    return;
+  }
+
+  // Enviar
+  try {
+    const response = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, message })
+    });
+    const data = await response.json();
+    if (response.ok) {
+      messageDiv.innerHTML = '<p class="text-green-500">Mensaje enviado exitosamente.</p>';
+      // Limpiar formulario
+      document.getElementById('contact-form').reset();
+    } else {
+      messageDiv.innerHTML = `<p class="text-red-500">${data.error}</p>`;
+    }
+  } catch (error) {
+    messageDiv.innerHTML = '<p class="text-red-500">Error al enviar el mensaje. Intente nuevamente.</p>';
+  }
+});
+</script>
+
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+
+<script src="blog.js"></script>
+
+</body>
+</html>
