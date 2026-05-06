@@ -1,0 +1,6 @@
+---
+title: Pensiones
+description: Nueva ley etc etc
+image: /uploads/download.jpeg
+---
+Nueva ley publicada en la gaceta
