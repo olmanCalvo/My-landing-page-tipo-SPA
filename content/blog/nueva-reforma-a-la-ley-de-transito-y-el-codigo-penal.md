@@ -1,7 +1,7 @@
 ---
 title: Nueva reforma a la ley de tránsito y el código penal
 description: Se sanciona la presencia de sustancias ilícitas, no solo la influencia.
-image: /uploads/whatsapp-image-2026-05-07-at-6.45.16-pm.jpeg
+image: /uploads/screenshot-from-2026-05-07-18-53-57.png
 ---
 Objeto jurídico de la reforma 
 
