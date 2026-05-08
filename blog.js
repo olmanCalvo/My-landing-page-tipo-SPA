@@ -34,14 +34,17 @@ async function loadBlogPosts() {
                 ${post.description}
               </p>
 
-              <details class="mt-auto">
-                <summary class="cursor-pointer font-bold uppercase tracking-widest text-xs text-secondary hover:text-primary transition-all">
-                  Leer más
-                </summary>
-                <div class="mt-4 text-neutral-800 leading-relaxed text-sm">
-                  ${post.content.replace(/\n/g, "<br>")}
-                </div>
-              </details>
+              <div class="mt-auto flex flex-col gap-3">
+                <a href="/post.html?slug=${post.slug}"
+                  class="bg-primary text-white px-6 py-4 font-bold uppercase tracking-widest hover:bg-secondary transition-all text-center">
+                  Ver publicación
+                </a>
+
+                <button onclick="copyPostLink('${post.slug}')"
+                  class="border-2 border-primary px-6 py-4 font-bold uppercase tracking-widest hover:bg-primary hover:text-white transition-all">
+                  Copiar link
+                </button>
+              </div>
             </div>
           </article>
         `;
@@ -50,6 +53,12 @@ async function loadBlogPosts() {
   } catch (error) {
     console.error("Error cargando posts:", error);
   }
+}
+
+function copyPostLink(slug) {
+  const url = `${window.location.origin}/post.html?slug=${slug}`;
+  navigator.clipboard.writeText(url);
+  alert("Link copiado correctamente.");
 }
 
 loadBlogPosts();
