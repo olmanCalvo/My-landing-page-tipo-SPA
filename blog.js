@@ -21,7 +21,7 @@ async function loadBlogPosts() {
             
             ${
               post.image
-                ? `<img src="${post.image}" alt="${post.title}" class="w-full h-56 object-cover">`
+                ? `<img src="${post.image}" alt="${post.title}" class="w-full h-auto object-contain">`
                 : ""
             }
 
