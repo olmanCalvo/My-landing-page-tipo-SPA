@@ -92,7 +92,7 @@ function generateHtml(post) {
     <h1 class="font-headline text-5xl font-bold mb-6 text-primary">${title}</h1>
     <p class="text-neutral-700 text-lg mb-10 leading-relaxed">${description}</p>
 
-    ${image ? `<img src="${image}" class="w-full h-96 object-cover mb-10 shadow-xl border-t-8 border-secondary"/>` : ""}
+    <img src="${image}" class="w-full h-auto object-contain mb-10 shadow-xl border-t-8 border-secondary"/>
 
     <div class="text-neutral-800 leading-relaxed text-base space-y-4">
       ${content}
